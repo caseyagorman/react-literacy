@@ -42,7 +42,7 @@ class App extends Component {
     for (let i = 0; i < students.length; i++) {
       students[i].words.push(word);
     }
-    const newState = Object.assign({}, this.state, { students });
+    const newState = Object.assign(this.state, { students });
     this.setState(newState);
   }
 
@@ -58,7 +58,11 @@ class App extends Component {
 
         <form onSubmit={this.addStudent}>
           Add New Student
-          <input type="text" ref={nameInput => (this.nameInput = nameInput)} />
+          <input
+            id="nameForm"
+            type="text"
+            ref={nameInput => (this.nameInput = nameInput)}
+          />
           <input type="submit" />
         </form>
 
@@ -74,3 +78,10 @@ class App extends Component {
 
 export default App;
 // Components that only handle logic, components that only handle what is shown on the page
+
+// Questions
+// Designing tables/database using react/redux. Do we have to/should we be using redux?
+// I want to work on stuff over thanksgiving break since I have no school all week and no plans.
+// What would be the highest leverage thing to work on?
+// Is it a good idea to write front end code in react for adding students and words before I design
+// tables and databases?
