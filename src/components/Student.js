@@ -1,5 +1,4 @@
 import React from "react";
-
 const Student = ({ name, words }) => (
   <div>
     Name: {name}
